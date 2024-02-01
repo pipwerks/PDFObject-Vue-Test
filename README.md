@@ -2,6 +2,9 @@
 
 Simple Vue project for testing the `<PDFObject>` Vue 3 component.
 
-npm install
+[PDFObject](https://github.com/pipwerks/pdfobject)
 
-npm run dev
+[pdfobject-vue](https://github.com/pipwerks/pdfobject-vue)
+
+## Instructions
+Download this repo, install (`npm install`) then run (`npm run dev`)
