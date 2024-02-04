@@ -3,7 +3,8 @@ const optionsObj = { page: 2, height: '500px', pdfOpenParams: { navpanes: 1, vie
 </script>
 
 <template>
-<h1>Testing PDFObject for Vue 3</h1>
+<h1>Testing PDFObject for Vue 3 (Compiled Vue Projects)</h1>
+<p><a href="/no-build.html">See the no-build version here</a></p>
 <h2>Set up your Vue project</h2>
 <pre>npm create vue@latest</pre>
 
@@ -23,17 +24,19 @@ app.use(PDFObjectPlugin);
 app.mount('#app');
 </pre>
 
-<h2>Add <code>&lt;PDFObject></code> component to your .vue pages as needed</h2>
+<h2>Add <code>&lt;PdfObject></code> component to your .vue pages as needed</h2>
+<p>Note the case: PdfObject. This is to align with Vue's naming convention for components, requiring two words.</p>
+<p>It's safe to use either <code>&lt;PdfObject></code> or <code>&lt;pdf-object></code>.</p>
 
 <div class="example">
 <h3>Example 1: Embed using inline <code>:options</code></h3>
 <pre>
 &lt;script>&lt;/script>
 &lt;template>
-&lt;PDFObject url="/pdf/sample.pdf" :options="{ height: '500px', pdfOpenParams: { view: 'FitV' }}" />
+&lt;PdfObject url="/pdf/sample.pdf" :options="{ height: '500px', pdfOpenParams: { view: 'FitV' }}" />
 &lt;/template>
 </pre>
-<PDFObject url="/pdf/sample.pdf" :options="{ height: '500px', pdfOpenParams: { view: 'FitV' }}" />
+<PdfObject url="/pdf/sample.pdf" :options="{ height: '500px', pdfOpenParams: { view: 'FitV' }}" />
 </div>
 
 <div class="example">
@@ -43,10 +46,10 @@ app.mount('#app');
 const optionsObj = { page: 2, height: '500px', pdfOpenParams: { navpanes: 1, view: 'FitH', pagemode: 'thumbs' }};
 &lt;/script>
 &lt;template>
-&lt;PDFObject url="/pdf/sample-3pp.pdf" :options="optionsObj" />
+&lt;PdfObject url="/pdf/sample-3pp.pdf" :options="optionsObj" />
 &lt;/template>
 </pre>
-<PDFObject url="/pdf/sample-3pp.pdf" :options="optionsObj" />
+<PdfObject url="/pdf/sample-3pp.pdf" :options="optionsObj" />
 </div>
 </template>
 

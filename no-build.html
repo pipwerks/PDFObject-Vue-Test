@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testing PDFObject for Vue 3 (No-build Vue Projects)</title>
+<style>
+html { margin: 0; padding: 2rem; }
+body { margin: 0; padding: 0; font: 16px sans-serif; color: #555; }
+.example { margin: 3rem 0; }
+pre { margin: 1rem; padding: 0; }
+h1, h2, h3 { line-height: 120%; margin: 2rem 0 1rem; padding: 0; }
+</style>
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<!-- provides global variable `PDFObject` -->
+<script src="https://unpkg.com/pdfobject"></script>
+
+<!-- provides global variable `PDFObjectVuePlugin` -->
+<script src="https://unpkg.com/pdfobject-vue"></script>
+
+</head>
+<body>
+<div id="app">
+    <h1>Testing PDFObject for Vue 3 (No-build Vue Projects)</h1>
+    <p><a href="/index.html">See the build/compiled version here</a></p>
+    <h2>Add Vue to your HTML file</h2>
+    <pre>&lt;script src="https://unpkg.com/vue@3">&lt;/script></pre>
+    
+    <h2>Add PDFObject and PDFObject-Vue to your HTML file.</h2>
+    <pre>
+&lt;script src="https://unpkg.com/pdfobject">&lt;/script>
+&lt;script src="https://unpkg.com/pdfobject-vue">&lt;/script>
+    </pre>
+    
+    <h2>Add PDFObject plugin to your Vue app</h2>
+    <pre>
+const { createApp } = Vue;
+const app = createApp({});
+app.use(PDFObjectVuePlugin);
+app.mount('#app');
+    </pre>
+    
+    <h2>Add <code>&lt;pdf-object></code> component to your HTML page</h2>
+    <p>Note the case: pdf-object. This is to align with Vue's naming convention for components, requiring two words.</p>
+    <p>For the no-build version of the plugin, you must use <code>&lt;pdf-object></code>. The alternative syntax <code>&lt;PdfObject></code> will throw an error.</p>
+    
+    <div class="example">
+    <h3>Example</h3>
+    <pre>
+&lt;div id="app">
+&lt;pdf-object url="/pdf/sample.pdf" :options="{ height: '500px', pdfOpenParams: { navpanes: 1, pagemode: 'thumbs' }}" />
+&lt;/div>
+    </pre>
+    <pdf-object url="/pdf/sample-3pp.pdf" :options="{ height: '500px', pdfOpenParams: { navpanes: 1, pagemode: 'thumbs' }}" />
+    </div>
+
+</div>
+<script>
+const { createApp } = Vue;
+const app = createApp({});
+app.use(PDFObjectVuePlugin);
+app.mount('#app');
+</script>
+</body>
+</html>

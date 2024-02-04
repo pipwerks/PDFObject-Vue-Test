@@ -1,6 +1,6 @@
 {
   "name": "pdfobject-vue-plugin-test",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "pdfobject": "^2.2.12",
-    "pdfobject-vue": "^0.0.1",
+    "pdfobject-vue": "^0.0.4",
     "vue": "^3.4.15"
   },
   "devDependencies": {
